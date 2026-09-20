@@ -1,4 +1,4 @@
-public class MergeSort {
+public class MergeSorter {
 
     private static final int CUTOFF = 16;
 
@@ -49,7 +49,7 @@ public class MergeSort {
                     a[k] = aux[j++];
                 }
             }
-            metrics.swaps++;
+            metrics.writes++;
         }
     }
 
@@ -63,10 +63,11 @@ public class MergeSort {
                     break;
                 }
                 a[j + 1] = a[j];
-                metrics.swaps++;
+                metrics.writes++;
                 j--;
             }
             a[j + 1] = key;
+            metrics.writes++;
         }
     }
 }

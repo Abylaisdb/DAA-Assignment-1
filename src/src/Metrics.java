@@ -3,12 +3,14 @@ public class Metrics {
     public long comparisons = 0;
     public long swaps = 0;
     public long recursiveCalls =0;
+    public long writes;
 
     public void reset(){
         maxDepth =0;
         comparisons =0;
         swaps =0;
         recursiveCalls =0;
+        writes =0;
     }
 
     public void recordCall(int depth){
@@ -26,6 +28,7 @@ public class Metrics {
                 ", comparisons=" + comparisons +
                 ", swaps=" + swaps +
                 ", recursiveCalls=" + recursiveCalls +
+                ", writes=" + writes +
                 '}';
     }
 }
