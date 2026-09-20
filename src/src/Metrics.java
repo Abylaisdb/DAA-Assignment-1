@@ -3,7 +3,7 @@ public class Metrics {
     public long comparisons = 0;
     public long swaps = 0;
     public long recursiveCalls =0;
-    public long writes;
+    public long writes =0;
 
     public void reset(){
         maxDepth =0;
